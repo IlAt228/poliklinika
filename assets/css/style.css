@@ -1,0 +1,234 @@
+/* Сброс стандартных отступов и границ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Установка Flexbox для body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Минимальная высота равна высоте окна просмотра */
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Темный фон страницы */
+    color: #e0e0e0; /* Светлый текст для контраста */
+}
+
+/* Контейнер основного контента */
+.content {
+    flex: 1; /* Занимает всё доступное пространство между шапкой и футером */
+    padding: 40px 20px;
+}
+
+/* Стиль для заголовка */
+h1 {
+    color: #ff4081; /* Ярко-розовый цвет */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Стиль для метки (label) */
+label {
+    display: block;
+    font-size: 1.1em;
+    color: #b0bec5; /* Серо-голубой цвет */
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+/* Контейнер формы */
+form {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #1e1e1e; /* Темный фон формы */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    text-align: left; /* Выравнивание содержимого формы по левому краю */
+}
+
+/* Общие стили для всех полей ввода, textarea и select */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%; /* Установка ширины 100% от контейнера формы */
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #333; /* Тёмная граница */
+    border-radius: 6px;
+    background-color: #2c2c2c; /* Ещё более тёмный фон полей */
+    color: #e0e0e0; /* Светлый текст */
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Стили при фокусе на поле ввода */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #ff4081; /* Ярко-розовая граница при фокусе */
+    box-shadow: 0 0 10px rgba(255, 64, 129, 0.7);
+    outline: none;
+}
+
+/* Стиль для textarea */
+textarea {
+    resize: vertical; /* Разрешение вертикального изменения размера */
+    min-height: 100px;
+}
+
+/* Кнопка отправки */
+button[type="submit"] {
+    width: 100%; /* Установка ширины 100% от контейнера формы */
+    padding: 14px;
+    background-color: #ff4081; /* Ярко-розовый фон кнопки */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Стилизация кнопки при наведении */
+button[type="submit"]:hover {
+    background-color: #f50057; /* Более насыщенный розовый при наведении */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Стиль для таблицы результатов */
+table {
+    width: 100%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e1e1e; /* Темный фон таблицы */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Заголовки таблицы */
+table th, table td {
+    padding: 15px;
+    border: 1px solid #333; /* Тёмная граница ячеек */
+    text-align: center;
+}
+
+table th {
+    background-color: #ff4081; /* Ярко-розовый фон заголовков */
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+/* Чередование строк таблицы */
+table tr:nth-child(even) {
+    background-color: #2c2c2c;
+}
+
+table tr:nth-child(odd) {
+    background-color: #1e1e1e;
+}
+
+/* Стиль для футера */
+.footer-content {
+    background-color: #1f1f1f;
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение элементов */
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    padding: 10px 0;
+    color: #b0bec5; /* Серо-голубой цвет текста */
+    font-size: 0.9em;
+}
+
+/* Кнопка логаут */
+.logout-button {
+    background-color: #ff5722; /* Оранжево-красный фон для кнопки */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logout-button:hover {
+    background-color: #e64a19; /* Более тёмный оранжевый при наведении */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Секция header */
+header {
+    background-color: #1e88e5; /* Ярко-синий цвет фона */
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Размещаем элементы по краям */
+    align-items: center;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Заголовки секций */
+.section-title {
+    background-color: #333;
+    padding: 10px 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    font-size: 1.5em;
+    color: #ff4081;
+}
+
+/* Стилизация ссылок */
+a {
+    color: #ff4081;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #f50057;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .section-title {
+        font-size: 1.2em;
+    }
+
+    table th, table td {
+        padding: 10px;
+    }
+}
